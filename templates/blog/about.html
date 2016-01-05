@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}
+    关于我|XT的小站
+{% endblock %}
+{% block path %}
+    <a href = "{% url 'home'%}">当前位置&nbsp;:&nbsp;首页&nbsp;</a>»&nbsp;关于我
+{% endblock %}
+{% block content %}
+	
+
+	 <div class="archive">
+             <div id="archives">
+        <h3>
+         关于本站
+        </h3>
+       
+         <blockquote>
+               &nbsp;&nbsp;&nbsp;&nbsp;linux下Python web框架Django开发简易版,部署在阿里云服务器上。
+               </br></br>
+               闲暇时间自己搞得一个个人博客，希望通过建站过程学些东西，以后也可以当作一个</br>
+               </br>记录、分享经历的地方。目前还比较简陋，以后继续完善。
+
+        </blockquote>
+        </br>
+       
+        <h3>
+        关于我
+        </h3>
+
+        <blockquote>
+               &nbsp;&nbsp;&nbsp;&nbsp;CS专业大四程序猿一枚，目前在北京实习涨姿势，主要负责后端服务器的维护。
+               </br></br>热爱开源，对数据挖掘技术感兴趣，欢迎志同道合的朋友一起研究分享。
+        </blockquote>
+        </br>
+        <ul>
+              
+                
+               
+        </ul>
+        
+        <h3>联系我
+        </h3>
+        <ul>
+        <li>博客:&nbsp;&nbsp;&nbsp;<a href="https://www.tmackan.com">刀锋</a></li>
+        <li>邮箱:&nbsp;&nbsp;&nbsp;630879576@qq.com </li>
+        <li>GitHub:&nbsp;&nbsp;<a href="https://github.com/xtaq">xtaq</a></li>
+        <li>豆瓣:&nbsp;&nbsp;&nbsp;青木 </li>
+        <!--<li>知乎:&nbsp;&nbsp;&nbsp;<a href="http://www.zhihu.com/people/kan-tmac"></a></li>-->
+        </ul>
+<!-- /.blog-post -->
+</div>
+</div>
+
+
+          {% include "blog/_comments.html" %}
+
+	
+{% endblock %}
+
+{% block side %}
+	 {% include "blog/_side.html" %}
+{% endblock %}
+
+
