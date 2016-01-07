@@ -11,15 +11,16 @@ admin.site.register(Classification)
       #pass
 #admin.site.register(Article,ArticleAdmin)
 
-class ArticleAdmin(admin.ModelAdmin):
-      class Media:
-         js = (
 
-         '/static/tinymce/tinymce.min.js',
-         '/static/tinymce/config.js',
+class ArticleAdmin(admin.ModelAdmin):
+
+    class Media:
+        js = (
+            '/static/tinymce/tinymce.min.js',
+            '/static/tinymce/config.js',
         
-         )
-admin.site.register(Article,ArticleAdmin)
+        )
+admin.site.register(Article, ArticleAdmin)
      
 
 
