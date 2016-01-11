@@ -5,7 +5,7 @@ from collections import OrderedDict
 
 
 class Author(models.Model):
-    name = models.CharField(max_length=130)
+    name = models.CharField(max_length=30)
     email = models.EmailField(blank=True)
     website = models.URLField(blank=True)
 
@@ -29,7 +29,7 @@ class TagManager(models.Manager):
 
 
 class Tag(models.Model):
-    name = models.CharField(max_length=120, blank=True)
+    name = models.CharField(max_length=20, blank=True)
     creat_time = models.DateTimeField(auto_now_add=True)
 
     objects = models.Manager()  # 默认的管理器
@@ -61,7 +61,7 @@ class ClassManager(models.Manager):
 
 
 class Classification(models.Model):
-      name = models.CharField(max_length=125)
+      name = models.CharField(max_length=25)
 
       objects = models.Manager()  # 默认的管理器
       class_list = ClassManager()  # 自定义的管理器
