@@ -98,7 +98,7 @@ $(function () {
 
 		<div id="nav2">
   <ul>
-    <li><a href="{% url 'home'%}"">首页</a></li>
+    <li><a href="{% url 'home'%}">首页</a></li>
     <li><a href="{% url 'archive'%}">文章归档</a></li>
     <li><a href="{% url 'message'%}">给我留言</a></li>
     <li><a href="{% url 'about'%}">关于我</a></li>
@@ -111,13 +111,13 @@ $(function () {
 			  <div id="content">
 				<div class="breadcrumb">
                                     
-                                   {% block path %}{% endblock %}
+					{% block path %}{% endblock %}
                                        
-                                </div>
+				</div>
                                                                
-                                  {% block content %}{% endblock %}
+				  {% block content %}{% endblock %}
 				
-			   </div> <!-- #content -->
+			  </div> <!-- #content -->
 			<aside id="sidebar-primary" role="complementary">
 			          {% block side %}{% endblock %}
 				

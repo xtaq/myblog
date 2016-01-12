@@ -35,7 +35,6 @@ class Tag(models.Model):
     objects = models.Manager()  # 默认的管理器
     tag_list = TagManager()  # 自定义的管理器
 
-
     @models.permalink
     def get_absolute_url(self):
         return('tagDetail', (), {
@@ -70,7 +69,7 @@ class Classification(models.Model):
           return self.name
 
 
-class ArticleManager(models.Model):
+class ArticleManager(models.Manager):
 
     def get_Article_onDate(self):  # 实现文章的按月归档, 返回 月份以及对应的文章数  如: [[2015.5,5],[2015.4,5]] ,
         post_date = Article.objects.dates('publish_time', 'month')
@@ -108,7 +107,6 @@ class ArticleManager(models.Model):
 
 
 class Article(models.Model):  # 文章
-    # id = models.CharField(max_lengh=25)
     title = models.CharField(max_length=100)
     author = models.ForeignKey(Author)
     tags = models.ManyToManyField(Tag, blank=True)  # 标签
